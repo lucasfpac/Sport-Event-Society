@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 """
-Spyder Editor
+Created on Mon Mar 2 19:53:00 2021
 
-This is a temporary script file.
+@author: Lucas Fortunato
 """
 
 
@@ -61,10 +61,6 @@ START TO YOUR CODE FROM HERE
 ______________________________________________________________________________
 """
 import sys
-#import pandas as pd #use ir for graph if need
-#import seaborn as sns #use ir for graph if need
-#import matplotlib.pyplot as plt #use ir for graph if need
-
 
 """
 Function to print index and members
@@ -110,13 +106,13 @@ def total_by_age (sport):
     count_age_4 = 0                    
     for n in members:
         if (int(n[4]) >= 12 and int(n[4]) <= 20):   # will filter by the ages
-            count_age_1 = count_age_1 + 1           # will add to the count in the range of age
+            count_age_1 +=  1           # will add to the count in the range of age
         elif (int(n[4]) >= 21 and int(n[4]) <= 40): 
-            count_age_2 = count_age_2 + 1            
+            count_age_2 += 1            
         elif (int(n[4]) >= 41 and int(n[4]) <= 60): 
-            count_age_3 = count_age_3 + 1           
+            count_age_3 += 1           
         elif (int(n[4]) >= 61 and int(n[4]) <= 86): 
-            count_age_4 = count_age_4 + 1           
+            count_age_4 += 1           
     print('Between 12 to 20 Years Old there are '+ str(count_age_1) +' Members') # will print how many member in the following range
     print('Between 21 to 40 Years Old there are '+ str(count_age_2) +' Members') 
     print('Between 41 to 60 Years Old there are '+ str(count_age_3) +' Members') 
@@ -133,11 +129,11 @@ def total_by_gender (sport):
     count_nonbinary = 0                          
     for m in members:
         if (m[3] == 'Male'):                     # will filter by gender
-            count_male = count_male + 1          # will add to the count of gender
+            count_male += 1          # will add to the count of gender
         elif (m[3] == 'Female'):                 
-            count_female = count_female + 1      
+            count_female += 1      
         else:                                    
-            count_nonbinary = count_nonbinary +1 
+            count_nonbinary += 1 
             
     print('There Are ' + str(count_male) + ' Males')            # will print how many member are in the following gender
     print('There Are ' + str(count_female) + ' Females')        
@@ -189,5 +185,6 @@ Welcome screen then menu
 """     
 print("Welcome to Sport Event Society \n")                     # first line of the program "Wellcome"    
 menu()                                                         # will open de function menu and start the loops      
+
 
 
